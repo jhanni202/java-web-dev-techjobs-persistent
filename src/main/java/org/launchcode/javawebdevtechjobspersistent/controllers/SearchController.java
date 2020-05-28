@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-
 import static org.launchcode.javawebdevtechjobspersistent.controllers.ListController.columnChoices;
 
 /**
@@ -38,7 +36,6 @@ public class SearchController {
         model.addAttribute("columns", columnChoices);
         model.addAttribute("title", "Jobs with " + columnChoices.get(searchType) + ": " + searchTerm);
         model.addAttribute("jobs", jobs);
-
         return "search";
     }
 }
